@@ -17,7 +17,7 @@ variable "alb_name" {
 
 variable "aws_accounts" {
   description = "A list of accounts which are permitted to access this endpoint service"
-  type        = []
+  type        = "list"
 }
 
 variable "acceptance_required" {
