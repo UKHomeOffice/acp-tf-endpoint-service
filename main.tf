@@ -33,7 +33,7 @@ resource "aws_vpc_endpoint_service_allowed_principal" "permitted" {
 
 ## Create a DNS record if required
 resource "aws_route53_record" "dns" {
-  name    = "${var.name}-endpoint"
+  name    = "${var.name}-endpoint.${var.dns_zone}"
   records = ["${aws_vpc_endpoint_service.service.private_dns_name}"]
   ttl     = "30"
   type    = "CNAME"
