@@ -7,17 +7,16 @@ variable "environment" {
 }
 
 variable "dns_zone" {
-  description = "An environment name for the ELB, i.e. prod, dev, ci etc and used to search for assets"
-  default     = ""
+  description = "The hosted route53 domain we should had the DNS record to"
 }
 
-variable "alb_name" {
-  description = "The name of the AWS ALB which we should connect the endpoint service to"
+variable "alb_arn" {
+  description = "The arn of the AWS ALB which we should connect the endpoint service to"
 }
 
 variable "aws_accounts" {
   description = "A list of accounts which are permitted to access this endpoint service"
-  type        = []
+  default     = []
 }
 
 variable "acceptance_required" {
