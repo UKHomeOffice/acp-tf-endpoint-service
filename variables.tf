@@ -19,3 +19,4 @@ variable "acceptance_required" {
   description = "Indicates whether acceptance is required"
   default     = false
 }
+
