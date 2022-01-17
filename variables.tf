@@ -12,6 +12,7 @@ variable "alb_arn" {
 
 variable "aws_accounts" {
   description = "A list of accounts which are permitted to access this endpoint service"
+  type        = list(string)
   default     = []
 }
 
